@@ -1,0 +1,2 @@
+module TipodoencasHelper
+end
