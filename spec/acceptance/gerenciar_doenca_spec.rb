@@ -51,7 +51,6 @@ feature 'gerenciar doenca' do
 	fill_in 'Histórico',  :with => "Começou em 1900"
 	fill_in 'Descrição',  :with => "Inflamação dos brônquios"
 	fill_in 'Causa',  :with => "Inflamação dos brônquios"   
-	fill_in 'Tipo',  :with => "Respiratória"
 
 		select 'Respiratória', :on => 'Tipo'
 	 
