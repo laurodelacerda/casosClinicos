@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130329025352) do
+ActiveRecord::Schema.define(:version => 20130331224246) do
+
+  create_table "doencas", :force => true do |t|
+    t.string   "nomepopular"
+    t.string   "nomebio"
+    t.string   "historico"
+    t.string   "descricao"
+    t.string   "causa"
+    t.integer  "tipodoenca_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  add_index "doencas", ["tipodoenca_id"], :name => "index_doencas_on_tipodoenca_id"
 
   create_table "tipodoencas", :force => true do |t|
     t.string   "tipo"

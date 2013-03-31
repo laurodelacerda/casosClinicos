@@ -1,0 +1,9 @@
+= semantic_form_for [@doenca] do |form|
+ 
+  = form.input :nomepopular, :label => 'Nome Popular:'
+  = form.input :nomebio, :label => 'Nome Biológico:'
+  = form.input :historico, :label => 'Histórico:'
+  = form.input :descricao, :label => 'Descrição:'
+  = form.input :causa, :label => 'Causa:'
+  = form.input :tipodoenca, :member_label => :tipo, :label => 'Tipo'
+  = form.submit 'Salvar'

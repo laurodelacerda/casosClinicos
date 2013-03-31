@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome Popular:</b>
+  <%= @doenca.nomepopular %>
+</p>
+
+<p>
+  <b>Nome Biológico:</b>
+  <%= @doenca.nomebio %>
+</p>
+
+<p>
+  <b>Histórico:</b>
+  <%= @doenca.historico %>
+</p>
+
+<p>
+  <b>Descrição:</b>
+  <%= @doenca.descricao %>
+</p>
+
+<p>
+  <b>Causa:</b>
+  <%= @doenca.causa %>
+</p>
+
+<p>
+  <b>Tipo</b>
+  <%= @doenca.tipodoenca.tipo %>
+</p>
+
+
+<%= link_to 'Edit', edit_doenca_path(@doenca) %> |
+<%= link_to 'Back', doencas_path %>
