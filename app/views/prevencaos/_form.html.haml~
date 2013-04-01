@@ -1,0 +1,4 @@
+= semantic_form_for [@prevencao] do |form|
+ 
+  = form.input :metodo, :label => 'Prevenção'
+  = form.submit 'Salvar'

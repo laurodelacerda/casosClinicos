@@ -1,0 +1,23 @@
+<h1>Listing prevencaos</h1>
+
+<table>
+  <tr>
+    <th>Método</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @prevencaos.each do |prevencao| %>
+  <tr>
+    <td><%= prevencao.metodo %></td>
+    <td><%= link_to 'Show', prevencao %></td>
+    <td><%= link_to 'Edit', edit_prevencao_path(prevencao) %></td>
+    <td><%= link_to 'Excluir', prevencao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Prevencao', new_prevencao_path %>
