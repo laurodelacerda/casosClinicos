@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Doenca:</b>
+  <%= @doencaprevencao.doenca %>
+</p>
+
+<p>
+  <b>Prevencao:</b>
+  <%= @doencaprevencao.prevencao %>
+</p>
+
+
+<%= link_to 'Edit', edit_doencaprevencao_path(@doencaprevencao) %> |
+<%= link_to 'Back', doencaprevencaos_path %>

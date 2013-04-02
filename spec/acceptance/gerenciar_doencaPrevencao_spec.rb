@@ -38,7 +38,9 @@ feature 'gerenciar doencaprevencao' do
 
     doenca = FactoryGirl.create(:doenca, :nomepopular => 'Bronquite') 
 
-	prevencao = FactoryGirl.create(:prevencao, :metodo => 'Evitar ambientes frios') 	
+	prevencao = FactoryGirl.create(:prevencao, :metodo => 'Evitar ambientes frios') 
+
+	doencaprevencao = FactoryGirl.create(:doencaprevencao, :doenca => doenca , :prevencao => prevencao)		
 
     visit doencaprevencaos_path
 
