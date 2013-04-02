@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130402030511) do
+ActiveRecord::Schema.define(:version => 20130402032324) do
 
   create_table "doencaprevencaos", :force => true do |t|
     t.integer  "doenca_id"
@@ -35,6 +35,16 @@ ActiveRecord::Schema.define(:version => 20130402030511) do
   end
 
   add_index "doencas", ["tipodoenca_id"], :name => "index_doencas_on_tipodoenca_id"
+
+  create_table "doencasintomas", :force => true do |t|
+    t.integer  "doenca_id"
+    t.integer  "sintoma_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "doencasintomas", ["doenca_id"], :name => "index_doencasintomas_on_doenca_id"
+  add_index "doencasintomas", ["sintoma_id"], :name => "index_doencasintomas_on_sintoma_id"
 
   create_table "doencatratamentos", :force => true do |t|
     t.integer  "doenca_id"

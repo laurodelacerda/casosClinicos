@@ -52,13 +52,13 @@ feature 'gerenciar doencatratamento' do
 
   def preencher_e_verificar_doencatratamento
 
-		select 'Bronquite', :on => 'Nome Popular'
-		select 'Ingerir dois comprimidos/dia', :on => 'Método'     
+		select 'Bronquite', :on => 'Doença'
+		select 'Ingerir dois comprimidos/dia', :on => 'Tratamento'     
 
 	click_button 'Salvar'
 
- 	page.should have_content 'Nome Popular: Bronquite'
- 	page.should have_content 'Método: Ingerir dois comprimidos/dia'
+ 	page.should have_content 'Doença: Bronquite'
+ 	page.should have_content 'Tratamento: Ingerir dois comprimidos/dia'
 
 
   end

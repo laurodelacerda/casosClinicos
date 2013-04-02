@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Doença:</b>
+  <b>Nome Popular:</b>
   <%= @doencatratamento.doenca.nomepopular %>
 </p>
 

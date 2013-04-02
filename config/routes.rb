@@ -1,4 +1,7 @@
 CasosClinicos::Application.routes.draw do
+  resources :doencasintomas
+
+
   resources :doencaprevencaos
 
 

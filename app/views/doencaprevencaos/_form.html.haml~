@@ -1,5 +1,5 @@
-= semantic_form_for [@doencatratamento] do |form|
+= semantic_form_for [@doencaprevencao] do |form|
  
   = form.input :doenca, :member_label => :nomepopular, :label => 'Nome Popular'
-  = form.input :tratamento, :member_label => :metodo, :label => 'Método'
+  = form.input :prevencao, :member_label => :metodo, :label => 'Método'
   = form.submit 'Salvar'

@@ -38,7 +38,9 @@ feature 'gerenciar doencatratamento' do
 
     doenca = FactoryGirl.create(:doenca, :nomepopular => 'Bronquite') 
 
-	tratamento = FactoryGirl.create(:tratamento, :metodo => 'Ingerir dois comprimidos/dia') 	
+	tratamento = FactoryGirl.create(:tratamento, :metodo => 'Ingerir dois comprimidos/dia') 
+
+	doencatratamento = FactoryGirl.create(:doencatratamento, :doenca => doenca , :tratamento => tratamento)		
 
     visit doencatratamentos_path
 

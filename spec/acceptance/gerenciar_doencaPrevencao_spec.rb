@@ -52,13 +52,13 @@ feature 'gerenciar doencaprevencao' do
 
   def preencher_e_verificar_doencaprevencao
 
-		select 'Bronquite', :on => 'Nome Popular'
-		select 'Evitar ambientes frios', :on => 'Método'     
+		select 'Bronquite', :on => 'Doença'
+		select 'Evitar ambientes frios', :on => 'Prevenção'     
 
 	click_button 'Salvar'
 
- 	page.should have_content 'Nome Popular: Bronquite'
- 	page.should have_content 'Método: Evitar ambientes frios'
+ 	page.should have_content 'Doença: Bronquite'
+ 	page.should have_content 'Prevenção: Evitar ambientes frios'
 
 
   end

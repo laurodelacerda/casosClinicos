@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Doenca:</b>
-  <%= @doencaprevencao.doenca %>
+  <b>Nome Popular:</b>
+  <%= @doencaprevencao.doenca.nomepopular %>
 </p>
 
 <p>
-  <b>Prevencao:</b>
-  <%= @doencaprevencao.prevencao %>
+  <b>Método:</b>
+  <%= @doencaprevencao.prevencao.metodo %>
 </p>
 
 
