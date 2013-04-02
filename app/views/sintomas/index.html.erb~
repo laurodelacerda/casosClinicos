@@ -1,0 +1,23 @@
+<h1>Listing sintomas</h1>
+
+<table>
+  <tr>
+    <th>Descricao</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @sintomas.each do |sintoma| %>
+  <tr>
+    <td><%= sintoma.descricao %></td>
+    <td><%= link_to 'Show', sintoma %></td>
+    <td><%= link_to 'Edit', edit_sintoma_path(sintoma) %></td>
+    <td><%= link_to 'Excluir', sintoma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Sintoma', new_sintoma_path %>

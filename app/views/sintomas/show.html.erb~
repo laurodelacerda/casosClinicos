@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @sintoma.descricao %>
+</p>
+
+
+<%= link_to 'Edit', edit_sintoma_path(@sintoma) %> |
+<%= link_to 'Back', sintomas_path %>

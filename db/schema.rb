@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130331235431) do
+ActiveRecord::Schema.define(:version => 20130402012453) do
 
   create_table "doencas", :force => true do |t|
     t.string   "nomepopular"
@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(:version => 20130331235431) do
 
   create_table "prevencaos", :force => true do |t|
     t.string   "metodo"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sintomas", :force => true do |t|
+    t.string   "descricao"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
