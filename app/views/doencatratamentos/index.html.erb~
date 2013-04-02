@@ -1,0 +1,25 @@
+<h1>Listing doencatratamentos</h1>
+
+<table>
+  <tr>
+    <th>Nome Popular</th>
+    <th>Método</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @doencatratamentos.each do |doencatratamento| %>
+  <tr>
+    <td><%= doencatratamento.doenca.nomepopular %></td>
+    <td><%= doencatratamento.tratamento.metodo %></td>
+    <td><%= link_to 'Show', doencatratamento %></td>
+    <td><%= link_to 'Edit', edit_doencatratamento_path(doencatratamento) %></td>
+    <td><%= link_to 'Excluir', doencatratamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Doencatratamento', new_doencatratamento_path %>

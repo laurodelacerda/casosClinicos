@@ -15,7 +15,7 @@
     <td><%= tratamento.tipotratamento.tipo %></td>
     <td><%= link_to 'Show', tratamento %></td>
     <td><%= link_to 'Edit', edit_tratamento_path(tratamento) %></td>
-    <td><%= link_to 'Destroy', tratamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Excluir', tratamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

@@ -1,0 +1,5 @@
+class Doencatratamento < ActiveRecord::Base
+  belongs_to :doenca
+  belongs_to :tratamento
+  attr_accessible :doenca_id, :tratamento_id
+end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome Popular:</b>
+  <%= @doencatratamento.doenca.nomepopular %>
+</p>
+
+<p>
+  <b>Método:</b>
+  <%= @doencatratamento.tratamento.metodo %>
+</p>
+
+
+<%= link_to 'Edit', edit_doencatratamento_path(@doencatratamento) %> |
+<%= link_to 'Back', doencatratamentos_path %>

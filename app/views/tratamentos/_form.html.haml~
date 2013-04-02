@@ -1,5 +1,5 @@
 = semantic_form_for [@tratamento] do |form|
  
-  = form.input :metodo, :label => 'Tipo'
+  = form.input :tratamento, :label => 'Método'
   = form.input :tipotratamento, :member_label => :tipo, :label => 'Tipo'
   = form.submit 'Salvar'
