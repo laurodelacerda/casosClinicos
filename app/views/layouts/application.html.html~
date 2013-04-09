@@ -19,7 +19,6 @@ Released   : 20130308
 <link href="http://fonts.googleapis.com/css?family=Arvo|Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <%= stylesheet_link_tag :style %>
-<%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :application %>
   <%= csrf_meta_tag %>
 </head>
@@ -27,7 +26,7 @@ Released   : 20130308
 <div id="menu-wrapper">
 	<div id="menu">
 		<ul>
-			<li class="current_page_item"><a href="/">Home</a></li>
+			<li class="current_page_item"><a href="#">Home</a></li>
 			<li><%= link_to 'Doenças', doencas_path %></li>
 			<li><%= link_to 'Tipos', tipodoencas_path %></li>
 			<li><%= link_to 'Tratamentos', tratamentos_path %></li>
@@ -41,7 +40,16 @@ Released   : 20130308
 	</div>
 	<!-- end #menu --> 
 </div>
-	<%= yield %>
+<div id="banner"><a href="#"><img src="assets/greys.jpg" width="1200" height="400" alt="" /></a></div>
+<div id="header-wrapper">
+	<div id="header">
+		<div id="logo">
+			<h1><a href="#">Sistema de <span>Casos Clínicos</span></a></h1>
+			<!--<p>Template design by <a href="http://www.freecsstemplates.org">FCT</a></p> -->
+		</div>
+	</div>
+</div>
+
 <div id="wrapper"> 
 
 </div>

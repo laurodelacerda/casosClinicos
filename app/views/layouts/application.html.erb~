@@ -27,7 +27,7 @@ Released   : 20130308
 <div id="menu-wrapper">
 	<div id="menu">
 		<ul>
-			<li class="current_page_item"><a href="/">Home</a></li>
+			<li class="current_page_item"><a href="#">Home</a></li>
 			<li><%= link_to 'Doenças', doencas_path %></li>
 			<li><%= link_to 'Tipos', tipodoencas_path %></li>
 			<li><%= link_to 'Tratamentos', tratamentos_path %></li>
