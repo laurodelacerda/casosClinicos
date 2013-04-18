@@ -1,53 +1,131 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--
-Design by Free CSS Templates
-http://www.freecsstemplates.org
-Released for free under a Creative Commons Attribution 2.5 License
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Casos Clínicos &middot; Index</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-Name       : Green Exposure  
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20130308
+    <!-- Chamando o CSS -->
+	<%= stylesheet_link_tag :bootstrap %>
+	<%= stylesheet_link_tag :bootstrapresponsive %>
+	<%= stylesheet_link_tag :style %>
+	<%= stylesheet_link_tag :all %>
+	<%= csrf_meta_tag %>
+    
+      /* Colar estilos de rodapé */
 
--->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Sistema de Casos Clínicos</title>
-<link href="http://fonts.googleapis.com/css?family=Arvo|Open+Sans:400,300,600,700" rel="stylesheet" type="text/css" />
-<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
-<%= stylesheet_link_tag :style %>
-<%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :application %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-<div id="menu-wrapper">
-	<div id="menu">
-		<ul>
-			<li class="current_page_item"><a href="/">Home</a></li>
-			<li><%= link_to 'Doenças', doencas_path %></li>
-			<li><%= link_to 'Tipos', tipodoencas_path %></li>
-			<li><%= link_to 'Tratamentos', tratamentos_path %></li>
-			<li><%= link_to 'Tipos', tipotratamentos_path %></li>
-			<li><%= link_to 'Sintomas', sintomas_path %></li>
-			<li><%= link_to 'Prevenção', prevencaos_path %></li>
-			<li><%= link_to 'Doenca&Sintoma', doencasintomas_path %></li>
-			<li><%= link_to 'Doenca&Tratamento', doencatratamentos_path %></li>
-			<li><%= link_to 'Doenca&Prevencao', doencaprevencaos_path %></li
-		</ul>
+      html,
+      body {
+        height: 100%;
+        /* O html e elementos do corpo não pode ter qualquer preenchimento ou margem.*/
+      }
+
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #ffffff;
+      }
+
+      /* Por último, aplique as correções de CSS necessárias */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      /* Customizar pag CSS */
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+
+      code {
+        font-size: 80%;
+      }
+
+    </style>
+    <link href="bootstrap-responsive.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+
+    <!-- Conteúdo da página-->
+    <div id="wrap">
+
+      <!-- Barra de navegação fixa no topo -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="/">Home</a>
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <!-- <li class="active"><a href="#">Principal</a></li> -->
+
+				<!-- Menu Dropdown Doenças -->
+				<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Doenças <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to 'Doenças', doencas_path %></li>
+                    <li><%= link_to 'Tipos', tipodoencas_path %></li>
+					<li class="divider"></li>
+					<li><%= link_to 'Doenças & Tratamentos', doencatratamentos_path %></li>
+					<li><%= link_to 'Doenças & Sintomas', doencasintomas_path %></li>
+					<li><%= link_to 'Doenças e Prevenções', doencaprevencaos_path %></li>
+                    
+              <!--  <li><a href="#">Listar todas</a></li>  -->
+                  </ul>
+                </li>
+
+				<!-- Menu Dropdown Tratamentos -->
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tratamentos <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><%= link_to 'Tratamentos', tratamentos_path %></li>
+                    <li class="divider"></li>
+					<li><%= link_to 'Tipos', tipotratamentos_path %></li>
+            <!--    <li><a href="#">Listar todos</a></li>     */  -->
+                  </ul>
+                </li>
+
+				<li><%= link_to 'Sintomas', sintomas_path %></li>
+				
+				<li><%= link_to 'Prevenção', prevencaos_path %></li>
+
+				<li><a href="#">Sobre</a></li> 
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
 	</div>
-	<!-- end #menu --> 
-</div>
-	<%= yield %>
-<div id="wrapper"> 
 
-</div>
-<div id="footer">
-	<p>&copy; 2013 Sistema de Casos Clínicos</p>
-</div>
-<!-- end #footer -->
-</body>
+	</div>
+		<%= yield %>
+	<div id="wrapper"> 
+	
+    <!-- Código JavaScript -->
+    <%= javascript_include_tag :jquery %>
+	<%= javascript_include_tag :application %>
+	<%= javascript_include_tag :bootstrap %>
+
+
+  </body>
 </html>
