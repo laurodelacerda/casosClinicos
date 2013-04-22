@@ -1,4 +1,4 @@
-<h1>Listing tipodoencas</h1>
+<h1>Lista de Tipos de Doenças</h1>
 
 <table>
   <tr>
@@ -11,13 +11,13 @@
 <% @tipodoencas.each do |tipodoenca| %>
   <tr>
     <td><%= tipodoenca.tipo %></td>
-    <td><%= link_to 'Show', tipodoenca %></td>
-    <td><%= link_to 'Edit', edit_tipodoenca_path(tipodoenca) %></td>
-    <td><%= link_to 'Excluir', tipodoenca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Detalhar', tipodoenca %></td>
+    <td><%= link_to 'Editar', edit_tipodoenca_path(tipodoenca) %></td>
+    <td><%= link_to 'Excluir', tipodoenca, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tipodoenca', new_tipodoenca_path %>
+<%= link_to 'Novo Tipo de Doença', new_tipodoenca_path %>

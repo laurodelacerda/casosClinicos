@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Metodo:</b>
+  <b>Método:</b>
   <%= @tratamento.metodo %>
 </p>
 
 <p>
-  <b>Tipotratamento:</b>
-  <%= @tratamento.tipotratamento %>
+  <b>Tipo:</b>
+  <%= @tratamento.tipotratamento.tipo %>
 </p>
 
 

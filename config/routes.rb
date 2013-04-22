@@ -1,12 +1,12 @@
 CasosClinicos::Application.routes.draw do
+  resources :doencaprevencaos
+
+
   get "home/index"
 
   root :to => "home#index"
 
   resources :doencasintomas
-
-
-  resources :doencaprevencaos
 
 
   resources :doencatratamentos

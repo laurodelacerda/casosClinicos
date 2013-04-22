@@ -26,7 +26,7 @@
 </p>
 
 <p>
-  <b>Tipo</b>
+  <b>Tipo:</b>
   <%= @doenca.tipodoenca.tipo %>
 </p>
 

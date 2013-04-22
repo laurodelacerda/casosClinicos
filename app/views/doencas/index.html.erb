@@ -1,12 +1,12 @@
-<h1>Listing doencas</h1>
+<h1>Lista de Doenças</h1>
 
 <table>
   <tr>
-    <th>Nomepopular</th>
-    <th>Nomebio</th>
-    <th>Historico</th>
-    <th>Descricao</th>
-    <th>Causa</th>
+    <th>Nome Popular</th>
+    <th>Nome Biológico</th>
+<!--<th>Histórico</th>
+    <th>Descrição</th>
+    <th>Causa</th> -->
     <th>Tipo</th>
     <th></th>
     <th></th>
@@ -17,17 +17,17 @@
   <tr>
     <td><%= doenca.nomepopular %></td>
     <td><%= doenca.nomebio %></td>
-    <td><%= doenca.historico %></td>
+<!--<td><%= doenca.historico %></td>
     <td><%= doenca.descricao %></td>
-    <td><%= doenca.causa %></td>
+    <td><%= doenca.causa %></td> -->
     <td><%= doenca.tipodoenca.tipo %></td>
-    <td><%= link_to 'Show', doenca %></td>
-    <td><%= link_to 'Edit', edit_doenca_path(doenca) %></td>
-    <td><%= link_to 'Excluir', doenca, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Detalhar', doenca %></td>
+    <td><%= link_to 'Editar', edit_doenca_path(doenca) %></td>
+    <td><%= link_to 'Excluir', doenca, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Doenca', new_doenca_path %>
+<%= link_to 'Nova Doença', new_doenca_path %>

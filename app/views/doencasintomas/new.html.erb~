@@ -1,0 +1,5 @@
+<h1>New doencasintoma</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', doencasintomas_path %>

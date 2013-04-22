@@ -1,4 +1,4 @@
-<h1>Listing tratamentos</h1>
+<h1>Lista de Métodos de Tratamento</h1>
 
 <table>
   <tr>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= tratamento.metodo %></td>
     <td><%= tratamento.tipotratamento.tipo %></td>
-    <td><%= link_to 'Show', tratamento %></td>
-    <td><%= link_to 'Edit', edit_tratamento_path(tratamento) %></td>
-    <td><%= link_to 'Excluir', tratamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Detalhar', tratamento %></td>
+    <td><%= link_to 'Editar', edit_tratamento_path(tratamento) %></td>
+    <td><%= link_to 'Excluir', tratamento, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tratamento', new_tratamento_path %>
+<%= link_to 'Novo Tratamento', new_tratamento_path %>

@@ -86,8 +86,8 @@
 					<li class="divider"></li>
 					<li><%= link_to 'Doenças & Tratamentos', doencatratamentos_path %></li>
 					<li><%= link_to 'Doenças & Sintomas', doencasintomas_path %></li>
-					<li><%= link_to 'Doenças e Prevenções', doencaprevencaos_path %></li>
-                    
+					<li><%= link_to 'Doenças & Prevenções', doencaprevencaos_path %></li>  
+                   
               <!--  <li><a href="#">Listar todas</a></li>  -->
                   </ul>
                 </li>
@@ -106,8 +106,14 @@
 				<li><%= link_to 'Sintomas', sintomas_path %></li>
 				
 				<li><%= link_to 'Prevenção', prevencaos_path %></li>
+				
+				<!-- Início Tooltip  -->
+				<li>					
+				<a href="#" data-toggle="tooltip" title="Sistema de Casos Clínicos por Lauro de Lacerda">Sobre</a>
+				</div>
+				</li>
 
-				<li><a href="#">Sobre</a></li> 
+
 
               </ul>
             </div>
@@ -125,6 +131,7 @@
     <%= javascript_include_tag :jquery %>
 	<%= javascript_include_tag :application %>
 	<%= javascript_include_tag :bootstrap %>
+	<%= javascript_include_tag :popover %>
 
 
   </body>

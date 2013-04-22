@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Metodo:</b>
+  <b>Método:</b>
   <%= @prevencao.metodo %>
 </p>
 

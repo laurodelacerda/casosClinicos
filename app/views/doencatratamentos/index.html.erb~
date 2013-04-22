@@ -1,9 +1,9 @@
-<h1>Listing doencatratamentos</h1>
+<h1>Lista de Doencas & Tratamentos</h1>
 
 <table>
   <tr>
-    <th>Nome Popular</th>
-    <th>Método</th>
+    <th>Doença</th>
+    <th>Tratamento</th>
     <th></th>
     <th></th>
     <th></th>

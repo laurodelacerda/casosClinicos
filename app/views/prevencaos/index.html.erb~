@@ -1,8 +1,8 @@
-<h1>Listing prevencaos</h1>
+<h1>Lista de Prevenções</h1>
 
 <table>
   <tr>
-    <th>Metodo</th>
+    <th>Método</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,7 +13,7 @@
     <td><%= prevencao.metodo %></td>
     <td><%= link_to 'Show', prevencao %></td>
     <td><%= link_to 'Edit', edit_prevencao_path(prevencao) %></td>
-    <td><%= link_to 'Excluir', prevencao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Excluir', prevencao, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>

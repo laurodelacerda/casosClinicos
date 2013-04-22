@@ -1,8 +1,8 @@
-<h1>Listing doencaprevencaos</h1>
+<h1>Lista de Doenças & Prevenções</h1>
 
 <table>
   <tr>
-    <th>Doença</th>
+    <th>Doenca</th>
     <th>Prevenção</th>
     <th></th>
     <th></th>
@@ -15,11 +15,11 @@
     <td><%= doencaprevencao.prevencao.metodo %></td>
     <td><%= link_to 'Show', doencaprevencao %></td>
     <td><%= link_to 'Edit', edit_doencaprevencao_path(doencaprevencao) %></td>
-    <td><%= link_to 'Excluir', doencaprevencao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Excluir', doencaprevencao, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Doencaprevencao', new_doencaprevencao_path %>
+<%= link_to 'Nova Doença & Prevenção', new_doencaprevencao_path %>

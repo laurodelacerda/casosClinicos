@@ -14,7 +14,43 @@
 	<%= stylesheet_link_tag :all %>
 	<%= csrf_meta_tag %>
     
+      /* Colar estilos de rodapé */
 
+      html,
+      body {
+        height: 100%;
+        /* O html e elementos do corpo não pode ter qualquer preenchimento ou margem.*/
+      }
+
+      #push,
+      #footer {
+        height: 60px;
+      }
+      #footer {
+        background-color: #ffffff;
+      }
+
+      /* Por último, aplique as correções de CSS necessárias */
+      @media (max-width: 767px) {
+        #footer {
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      /* Customizar pag CSS */
+      #wrap > .container {
+        padding-top: 60px;
+      }
+      .container .credit {
+        margin: 20px 0;
+      }
+
+      code {
+        font-size: 80%;
+      }
 
     </style>
     <link href="bootstrap-responsive.css" rel="stylesheet">
@@ -50,8 +86,8 @@
 					<li class="divider"></li>
 					<li><%= link_to 'Doenças & Tratamentos', doencatratamentos_path %></li>
 					<li><%= link_to 'Doenças & Sintomas', doencasintomas_path %></li>
-					<li><%= link_to 'Doenças e Prevenções', doencaprevencaos_path %></li>
-                    
+					<li><%= link_to 'Doenças & Prevenções', doencaprevencaos_path %></li>  
+                   
               <!--  <li><a href="#">Listar todas</a></li>  -->
                   </ul>
                 </li>
@@ -70,8 +106,13 @@
 				<li><%= link_to 'Sintomas', sintomas_path %></li>
 				
 				<li><%= link_to 'Prevenção', prevencaos_path %></li>
+				
+				<!-- Início Tooltip -->			
+				<a href="#" data-toggle="tooltip" title="Sistema de Casos Clínicos por Lauro de Lacerda">Sobre</a>
+				</div>
+				</li>
 
-				<li><a href="#">Sobre</a></li> 
+
 
               </ul>
             </div>
@@ -89,6 +130,7 @@
     <%= javascript_include_tag :jquery %>
 	<%= javascript_include_tag :application %>
 	<%= javascript_include_tag :bootstrap %>
+	<%= javascript_include_tag :popover %>
 
 
   </body>

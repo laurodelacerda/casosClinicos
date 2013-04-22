@@ -1,4 +1,4 @@
-<h1>Listing prevencaos</h1>
+<h1>Lista de Prevenções</h1>
 
 <table>
   <tr>
@@ -11,13 +11,13 @@
 <% @prevencaos.each do |prevencao| %>
   <tr>
     <td><%= prevencao.metodo %></td>
-    <td><%= link_to 'Show', prevencao %></td>
-    <td><%= link_to 'Edit', edit_prevencao_path(prevencao) %></td>
-    <td><%= link_to 'Excluir', prevencao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Detalhar', prevencao %></td>
+    <td><%= link_to 'Editar', edit_prevencao_path(prevencao) %></td>
+    <td><%= link_to 'Excluir', prevencao, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Prevencao', new_prevencao_path %>
+<%= link_to 'Nova Prevenção', new_prevencao_path %>

@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @tipodoenca.tipo %>
+</p>
+
+
+<%= link_to 'Edit', edit_tipodoenca_path(@tipodoenca) %> |
+<%= link_to 'Back', tipodoencas_path %>

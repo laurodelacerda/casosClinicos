@@ -1,4 +1,4 @@
-<h1>Listing tipotratamentos</h1>
+<h1>Lista de Tipos de Tratamentos</h1>
 
 <table>
   <tr>
@@ -11,13 +11,13 @@
 <% @tipotratamentos.each do |tipotratamento| %>
   <tr>
     <td><%= tipotratamento.tipo %></td>
-    <td><%= link_to 'Show', tipotratamento %></td>
-    <td><%= link_to 'Edit', edit_tipotratamento_path(tipotratamento) %></td>
-    <td><%= link_to 'Excluir', tipotratamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Detalhar', tipotratamento %></td>
+    <td><%= link_to 'Editar', edit_tipotratamento_path(tipotratamento) %></td>
+    <td><%= link_to 'Excluir', tipotratamento, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Tipotratamento', new_tipotratamento_path %>
+<%= link_to 'Novo Tipo de Tratamento', new_tipotratamento_path %>

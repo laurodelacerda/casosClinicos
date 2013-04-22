@@ -1,4 +1,4 @@
-<h1>Listing doencatratamentos</h1>
+<h1>Lista de Doencas & Tratamentos</h1>
 
 <table>
   <tr>
@@ -13,13 +13,13 @@
   <tr>
     <td><%= doencatratamento.doenca.nomepopular %></td>
     <td><%= doencatratamento.tratamento.metodo %></td>
-    <td><%= link_to 'Show', doencatratamento %></td>
-    <td><%= link_to 'Edit', edit_doencatratamento_path(doencatratamento) %></td>
-    <td><%= link_to 'Excluir', doencatratamento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Detalhar', doencatratamento %></td>
+    <td><%= link_to 'Editar', edit_doencatratamento_path(doencatratamento) %></td>
+    <td><%= link_to 'Excluir', doencatratamento, method: :delete, data: { confirm: 'Deseja Excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Doencatratamento', new_doencatratamento_path %>
+<%= link_to 'Nova Doença & Tratamento', new_doencatratamento_path %>

@@ -1,8 +1,8 @@
-<h1>Listing doencasintomas</h1>
+<h1>Lista de Doenças & Sintomas</h1>
 
 <table>
   <tr>
-    <th>Doenca</th>
+    <th>Doença</th>
     <th>Sintoma</th>
     <th></th>
     <th></th>
@@ -11,15 +11,15 @@
 
 <% @doencasintomas.each do |doencasintoma| %>
   <tr>
-    <td><%= doencasintoma.doenca %></td>
-    <td><%= doencasintoma.sintoma %></td>
-    <td><%= link_to 'Show', doencasintoma %></td>
-    <td><%= link_to 'Edit', edit_doencasintoma_path(doencasintoma) %></td>
-    <td><%= link_to 'Destroy', doencasintoma, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= doencasintoma.doenca.nomepopular %></td>
+    <td><%= doencasintoma.sintoma.descricao %></td>
+    <td><%= link_to 'Detalhar', doencasintoma %></td>
+    <td><%= link_to 'Editar', edit_doencasintoma_path(doencasintoma) %></td>
+    <td><%= link_to 'Excluir', doencasintoma, method: :delete, data: { confirm: 'Deseja excluir?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Doencasintoma', new_doencasintoma_path %>
+<%= link_to 'Novo', new_doencasintoma_path %>
